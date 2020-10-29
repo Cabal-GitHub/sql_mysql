@@ -1,0 +1,40 @@
+create database platzi_operation; --> Para crear una base de datos
+
+create database if not exists platzi_operation; --> crea una base de datos pero si no existe platzi_operation
+
+show warnings;
+
+use platzi_operation; --> ir a la base de datos platzi_operation
+
+show databases; --> muestra las base de datos
+
+show tables; --> muestra las tablas de una base
+
+Empty set (0.00 sec) --> Este mensaje es tipo null o 0, quiere decir que no tiene nada.
+
+create table if not exists books (
+book_id INTERGER PRIMARY AUTO_INCREMENT,
+author ,
+title VARCHAR(100) NOT NULL,
+year INTERGER UNSIGNED NOT NULL DEFAULT 1900,
+language VARCHAR(2) NOT NULL DEFAULT 'es' COMMENT 'iso 639-1 language',
+cover_url VARCHAR(500),
+price DOUBLE(6,2) NOT NULL DEFAULT 10.0,
+sellable TINYINT(1) DEFAULT 1,
+copies INTERGER NOT NULL DEFAULT 1,
+description TEXT
+)
+
+Notas:
+cardinalidad : número de elementos que hay en un conjunto en esta caso de una tabla tabla
+Entero positivo, negativo o solo positivo
+NOT NULL: permite que no esté sin completar, 
+VACIO: No es null es vacio
+INTERGER UNSIGNED: no exista signos de forma que los números siempre seran positivos
+TEXTO VARCHAR(#maximo de caracteres)
+DEFAULT: Le asigno un valor en caso que venga vacio
+COMMENT: Es un comentario en la columna que nadie va a ver solo el administrador de la tabla
+IMAGENES: ¿Se guarda en la DB?, no debería guardar binarios en la db, debería guardarse la URL de donde se encuentra la imagen
+DOUBLE(6,2): De esos 6 número reserve 2 para decimales, 4 espacios antes del punto y 2 despues del punto
+TINYINT: campo entero de solo 1 o 0, funciona como bandera
+

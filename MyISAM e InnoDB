@@ -1,0 +1,22 @@
+Dos principales tipos de tablas
+InnoDB y MyISAM
+
+InnDB
+Tabla de catalogo:
+Crecerá a paso lento -innodb
+Robusta
+NUeva 
+Mas recuperable
+un poco más lenta
+
+
+MyISAM
+Tabla de prestamos
+Directa
+Sencilla
+Rápida
+Crecerá más rapido 
+utilizaoms mucho 
+tienen mayor accceso a disco duro
+
+En todas nos interesa la velocidad y en todas se puede recuperar info
